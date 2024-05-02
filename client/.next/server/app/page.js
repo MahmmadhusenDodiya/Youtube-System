@@ -89,6 +89,72 @@ module.exports = require("next/dist/compiled/next-server/app-page.runtime.dev.js
 
 /***/ }),
 
+/***/ "assert":
+/*!*************************!*\
+  !*** external "assert" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");
+
+/***/ }),
+
+/***/ "events":
+/*!*************************!*\
+  !*** external "events" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("events");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");
+
+/***/ }),
+
+/***/ "https":
+/*!************************!*\
+  !*** external "https" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");
+
+/***/ }),
+
+/***/ "os":
+/*!*********************!*\
+  !*** external "os" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");
+
+/***/ }),
+
 /***/ "path":
 /*!***********************!*\
   !*** external "path" ***!
@@ -100,6 +166,28 @@ module.exports = require("path");
 
 /***/ }),
 
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "tty":
+/*!**********************!*\
+  !*** external "tty" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tty");
+
+/***/ }),
+
 /***/ "url":
 /*!**********************!*\
   !*** external "url" ***!
@@ -108,6 +196,28 @@ module.exports = require("path");
 
 "use strict";
 module.exports = require("url");
+
+/***/ }),
+
+/***/ "util":
+/*!***********************!*\
+  !*** external "util" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ }),
 
@@ -132,13 +242,13 @@ eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__w
 
 /***/ }),
 
-/***/ "(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true!":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true! ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Ccomponents%5C%5CuploadForm.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%5D%7D&server=true!":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Ccomponents%5C%5CuploadForm.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%5D%7D&server=true! ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/image-component.js */ \"(ssr)/./node_modules/next/dist/client/image-component.js\", 23));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./src/app/pages/room.jsx */ \"(ssr)/./src/app/pages/room.jsx\"));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LWZsaWdodC1jbGllbnQtZW50cnktbG9hZGVyLmpzP21vZHVsZXM9JTdCJTIycmVxdWVzdCUyMiUzQSUyMkMlM0ElNUMlNUNVc2VycyU1QyU1Q0RFTEwlNUMlNUNEZXNrdG9wJTVDJTVDWW91dHViZS1obGQlNUMlNUNjbGllbnQlNUMlNUNub2RlX21vZHVsZXMlNUMlNUNuZXh0JTVDJTVDZGlzdCU1QyU1Q2NsaWVudCU1QyU1Q2ltYWdlLWNvbXBvbmVudC5qcyUyMiUyQyUyMmlkcyUyMiUzQSU1QiU1RCU3RCZtb2R1bGVzPSU3QiUyMnJlcXVlc3QlMjIlM0ElMjJDJTNBJTVDJTVDVXNlcnMlNUMlNUNERUxMJTVDJTVDRGVza3RvcCU1QyU1Q1lvdXR1YmUtaGxkJTVDJTVDY2xpZW50JTVDJTVDc3JjJTVDJTVDYXBwJTVDJTVDcGFnZXMlNUMlNUNyb29tLmpzeCUyMiUyQyUyMmlkcyUyMiUzQSU1QiUyMmRlZmF1bHQlMjIlNUQlN0Qmc2VydmVyPXRydWUhIiwibWFwcGluZ3MiOiJBQUFBLHNOQUF3STtBQUN4STtBQUNBLDRKQUEwSSIsInNvdXJjZXMiOlsid2VicGFjazovL2NsaWVudC8/Zjk3NCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIkM6XFxcXFVzZXJzXFxcXERFTExcXFxcRGVza3RvcFxcXFxZb3V0dWJlLWhsZFxcXFxjbGllbnRcXFxcbm9kZV9tb2R1bGVzXFxcXG5leHRcXFxcZGlzdFxcXFxjbGllbnRcXFxcaW1hZ2UtY29tcG9uZW50LmpzXCIpO1xuO1xuaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIsIHdlYnBhY2tFeHBvcnRzOiBbXCJkZWZhdWx0XCJdICovIFwiQzpcXFxcVXNlcnNcXFxcREVMTFxcXFxEZXNrdG9wXFxcXFlvdXR1YmUtaGxkXFxcXGNsaWVudFxcXFxzcmNcXFxcYXBwXFxcXHBhZ2VzXFxcXHJvb20uanN4XCIpO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true!\n");
+eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/image-component.js */ \"(ssr)/./node_modules/next/dist/client/image-component.js\", 23));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./src/app/components/uploadForm.jsx */ \"(ssr)/./src/app/components/uploadForm.jsx\"));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./src/app/pages/room.jsx */ \"(ssr)/./src/app/pages/room.jsx\"));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LWZsaWdodC1jbGllbnQtZW50cnktbG9hZGVyLmpzP21vZHVsZXM9JTdCJTIycmVxdWVzdCUyMiUzQSUyMkMlM0ElNUMlNUNVc2VycyU1QyU1Q0RFTEwlNUMlNUNEZXNrdG9wJTVDJTVDWW91dHViZS1obGQlNUMlNUNjbGllbnQlNUMlNUNub2RlX21vZHVsZXMlNUMlNUNuZXh0JTVDJTVDZGlzdCU1QyU1Q2NsaWVudCU1QyU1Q2ltYWdlLWNvbXBvbmVudC5qcyUyMiUyQyUyMmlkcyUyMiUzQSU1QiU1RCU3RCZtb2R1bGVzPSU3QiUyMnJlcXVlc3QlMjIlM0ElMjJDJTNBJTVDJTVDVXNlcnMlNUMlNUNERUxMJTVDJTVDRGVza3RvcCU1QyU1Q1lvdXR1YmUtaGxkJTVDJTVDY2xpZW50JTVDJTVDc3JjJTVDJTVDYXBwJTVDJTVDY29tcG9uZW50cyU1QyU1Q3VwbG9hZEZvcm0uanN4JTIyJTJDJTIyaWRzJTIyJTNBJTVCJTIyZGVmYXVsdCUyMiU1RCU3RCZtb2R1bGVzPSU3QiUyMnJlcXVlc3QlMjIlM0ElMjJDJTNBJTVDJTVDVXNlcnMlNUMlNUNERUxMJTVDJTVDRGVza3RvcCU1QyU1Q1lvdXR1YmUtaGxkJTVDJTVDY2xpZW50JTVDJTVDc3JjJTVDJTVDYXBwJTVDJTVDcGFnZXMlNUMlNUNyb29tLmpzeCUyMiUyQyUyMmlkcyUyMiUzQSU1QiU1RCU3RCZzZXJ2ZXI9dHJ1ZSEiLCJtYXBwaW5ncyI6IkFBQUEsc05BQXdJO0FBQ3hJO0FBQ0Esa0xBQXFKO0FBQ3JKO0FBQ0EsNEpBQTZHIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vY2xpZW50Lz9lNWRmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiQzpcXFxcVXNlcnNcXFxcREVMTFxcXFxEZXNrdG9wXFxcXFlvdXR1YmUtaGxkXFxcXGNsaWVudFxcXFxub2RlX21vZHVsZXNcXFxcbmV4dFxcXFxkaXN0XFxcXGNsaWVudFxcXFxpbWFnZS1jb21wb25lbnQuanNcIik7XG47XG5pbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiwgd2VicGFja0V4cG9ydHM6IFtcImRlZmF1bHRcIl0gKi8gXCJDOlxcXFxVc2Vyc1xcXFxERUxMXFxcXERlc2t0b3BcXFxcWW91dHViZS1obGRcXFxcY2xpZW50XFxcXHNyY1xcXFxhcHBcXFxcY29tcG9uZW50c1xcXFx1cGxvYWRGb3JtLmpzeFwiKTtcbjtcbmltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiQzpcXFxcVXNlcnNcXFxcREVMTFxcXFxEZXNrdG9wXFxcXFlvdXR1YmUtaGxkXFxcXGNsaWVudFxcXFxzcmNcXFxcYXBwXFxcXHBhZ2VzXFxcXHJvb20uanN4XCIpO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Cnode_modules%5C%5Cnext%5C%5Cdist%5C%5Cclient%5C%5Cimage-component.js%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Ccomponents%5C%5CuploadForm.jsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CDELL%5C%5CDesktop%5C%5CYoutube-hld%5C%5Cclient%5C%5Csrc%5C%5Capp%5C%5Cpages%5C%5Croom.jsx%22%2C%22ids%22%3A%5B%5D%7D&server=true!\n");
 
 /***/ }),
 
@@ -149,6 +259,17 @@ eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__w
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "(ssr)/./src/app/components/uploadForm.jsx":
+/*!*******************************************!*\
+  !*** ./src/app/components/uploadForm.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ \"(ssr)/./node_modules/axios/lib/axios.js\");\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\nconst UploadForm = ()=>{\n    const [selectedFile, setSelectedFile] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null);\n    const handleFileChange = (e1)=>{\n        setSelectedFile(e1.target.files[0]);\n    };\n    const handleSubmit = ()=>{\n        e.preventDefault();\n        handlFileUpload(selectedFile);\n    };\n    const handleFileUpload = async (file)=>{\n        try {\n            const formData = new FormData();\n            formData.append(\"file\", file);\n            console.log(\"Going to upload file to server\");\n            const res = await axios__WEBPACK_IMPORTED_MODULE_2__[\"default\"].post(`http://localhost:8080/upload`, formData, {\n                headers: {\n                    \"Content-Type\": \"multipart/form-data\"\n                }\n            });\n            console.log(res.data);\n        } catch (error) {\n            console.log(\"Error Uploading file \", error);\n        }\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: \"UploadForm\"\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\DELL\\\\Desktop\\\\Youtube-hld\\\\client\\\\src\\\\app\\\\components\\\\uploadForm.jsx\",\n        lineNumber: 40,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UploadForm);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9zcmMvYXBwL2NvbXBvbmVudHMvdXBsb2FkRm9ybS5qc3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUNvQztBQUNYO0FBRXpCLE1BQU1HLGFBQWE7SUFFakIsTUFBTSxDQUFDQyxjQUFhQyxnQkFBZ0IsR0FBQ0osK0NBQVFBLENBQUM7SUFFOUMsTUFBTUssbUJBQWtCLENBQUNDO1FBQ3ZCRixnQkFBZ0JFLEdBQUVDLE1BQU0sQ0FBQ0MsS0FBSyxDQUFDLEVBQUU7SUFDbkM7SUFFQSxNQUFNQyxlQUFhO1FBQ2pCSCxFQUFFSSxjQUFjO1FBQ2hCQyxnQkFBZ0JSO0lBQ2xCO0lBRUEsTUFBTVMsbUJBQWlCLE9BQU9DO1FBQzVCLElBQUc7WUFDRCxNQUFNQyxXQUFTLElBQUlDO1lBQ25CRCxTQUFTRSxNQUFNLENBQUMsUUFBT0g7WUFDdkJJLFFBQVFDLEdBQUcsQ0FBQztZQUVaLE1BQU1DLE1BQUksTUFBTWxCLDZDQUFLQSxDQUFDbUIsSUFBSSxDQUFDLENBQUMsNEJBQTRCLENBQUMsRUFBQ04sVUFBUztnQkFDakVPLFNBQVE7b0JBQ04sZ0JBQWU7Z0JBQ2pCO1lBQ0Y7WUFDQUosUUFBUUMsR0FBRyxDQUFDQyxJQUFJRyxJQUFJO1FBQ3RCLEVBQ0EsT0FBTUMsT0FDTjtZQUNFTixRQUFRQyxHQUFHLENBQUMseUJBQXdCSztRQUN0QztJQUVGO0lBR0EscUJBQ0UsOERBQUNDO2tCQUFJOzs7Ozs7QUFFVDtBQUVBLGlFQUFldEIsVUFBVUEsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL2NsaWVudC8uL3NyYy9hcHAvY29tcG9uZW50cy91cGxvYWRGb3JtLmpzeD9iNTNkIl0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIGNsaWVudFwiXHJcbmltcG9ydCBSZWFjdCx7dXNlU3RhdGV9IGZyb20gJ3JlYWN0J1xyXG5pbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnXHJcblxyXG5jb25zdCBVcGxvYWRGb3JtID0gKCkgPT4ge1xyXG5cclxuICBjb25zdCBbc2VsZWN0ZWRGaWxlLHNldFNlbGVjdGVkRmlsZV09dXNlU3RhdGUobnVsbCk7XHJcblxyXG4gIGNvbnN0IGhhbmRsZUZpbGVDaGFuZ2U9IChlKT0+e1xyXG4gICAgc2V0U2VsZWN0ZWRGaWxlKGUudGFyZ2V0LmZpbGVzWzBdKTtcclxuICB9O1xyXG5cclxuICBjb25zdCBoYW5kbGVTdWJtaXQ9KCk9PntcclxuICAgIGUucHJldmVudERlZmF1bHQoKTtcclxuICAgIGhhbmRsRmlsZVVwbG9hZChzZWxlY3RlZEZpbGUpO1xyXG4gIH1cclxuXHJcbiAgY29uc3QgaGFuZGxlRmlsZVVwbG9hZD1hc3luYyAoZmlsZSk9PntcclxuICAgIHRyeXtcclxuICAgICAgY29uc3QgZm9ybURhdGE9bmV3IEZvcm1EYXRhKCk7XHJcbiAgICAgIGZvcm1EYXRhLmFwcGVuZCgnZmlsZScsZmlsZSk7XHJcbiAgICAgIGNvbnNvbGUubG9nKCdHb2luZyB0byB1cGxvYWQgZmlsZSB0byBzZXJ2ZXInKTtcclxuXHJcbiAgICAgIGNvbnN0IHJlcz1hd2FpdCBheGlvcy5wb3N0KGBodHRwOi8vbG9jYWxob3N0OjgwODAvdXBsb2FkYCxmb3JtRGF0YSx7XHJcbiAgICAgICAgaGVhZGVyczp7XHJcbiAgICAgICAgICBcIkNvbnRlbnQtVHlwZVwiOlwibXVsdGlwYXJ0L2Zvcm0tZGF0YVwiXHJcbiAgICAgICAgfVxyXG4gICAgICB9KTtcclxuICAgICAgY29uc29sZS5sb2cocmVzLmRhdGEpO1xyXG4gICAgfVxyXG4gICAgY2F0Y2goZXJyb3IpXHJcbiAgICB7XHJcbiAgICAgIGNvbnNvbGUubG9nKFwiRXJyb3IgVXBsb2FkaW5nIGZpbGUgXCIsZXJyb3IpO1xyXG4gICAgfVxyXG5cclxuICB9XHJcblxyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPGRpdj5VcGxvYWRGb3JtPC9kaXY+XHJcbiAgKVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBVcGxvYWRGb3JtOyJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZVN0YXRlIiwiYXhpb3MiLCJVcGxvYWRGb3JtIiwic2VsZWN0ZWRGaWxlIiwic2V0U2VsZWN0ZWRGaWxlIiwiaGFuZGxlRmlsZUNoYW5nZSIsImUiLCJ0YXJnZXQiLCJmaWxlcyIsImhhbmRsZVN1Ym1pdCIsInByZXZlbnREZWZhdWx0IiwiaGFuZGxGaWxlVXBsb2FkIiwiaGFuZGxlRmlsZVVwbG9hZCIsImZpbGUiLCJmb3JtRGF0YSIsIkZvcm1EYXRhIiwiYXBwZW5kIiwiY29uc29sZSIsImxvZyIsInJlcyIsInBvc3QiLCJoZWFkZXJzIiwiZGF0YSIsImVycm9yIiwiZGl2Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./src/app/components/uploadForm.jsx\n");
 
 /***/ }),
 
@@ -174,6 +295,35 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "(rsc)/./src/app/components/uploadForm.jsx":
+/*!*******************************************!*\
+  !*** ./src/app/components/uploadForm.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   $$typeof: () => (/* binding */ $$typeof),
+/* harmony export */   __esModule: () => (/* binding */ __esModule),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
+
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\DELL\Desktop\Youtube-hld\client\src\app\components\uploadForm.jsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\DELL\Desktop\Youtube-hld\client\src\app\components\uploadForm.jsx#default`));
+
+
+/***/ }),
+
 /***/ "(rsc)/./src/app/layout.js":
 /*!***************************!*\
   !*** ./src/app/layout.js ***!
@@ -192,7 +342,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(rsc)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/image */ \"(rsc)/./node_modules/next/dist/api/image.js\");\n/* harmony import */ var _pages_room__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/room */ \"(rsc)/./src/app/pages/room.jsx\");\n\n\n\nfunction Home() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_pages_room__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n        fileName: \"C:\\\\Users\\\\DELL\\\\Desktop\\\\Youtube-hld\\\\client\\\\src\\\\app\\\\page.js\",\n        lineNumber: 8,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9zcmMvYXBwL3BhZ2UuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQStCO0FBQ0M7QUFJakIsU0FBU0U7SUFDdEIscUJBQ0UsOERBQUNELG1EQUFJQTs7Ozs7QUFFVCIsInNvdXJjZXMiOlsid2VicGFjazovL2NsaWVudC8uL3NyYy9hcHAvcGFnZS5qcz8yYjNkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBJbWFnZSBmcm9tIFwibmV4dC9pbWFnZVwiO1xuaW1wb3J0IFJvb20gZnJvbSBcIi4vcGFnZXMvcm9vbVwiO1xuXG5cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHtcbiAgcmV0dXJuIChcbiAgICA8Um9vbS8+XG4gICk7XG59XG4iXSwibmFtZXMiOlsiSW1hZ2UiLCJSb29tIiwiSG9tZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./src/app/page.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(rsc)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/image */ \"(rsc)/./node_modules/next/dist/api/image.js\");\n/* harmony import */ var _pages_room__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/room */ \"(rsc)/./src/app/pages/room.jsx\");\n/* harmony import */ var _components_uploadForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/uploadForm */ \"(rsc)/./src/app/components/uploadForm.jsx\");\n\n\n\n\nfunction Home() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_uploadForm__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {}, void 0, false, {\n            fileName: \"C:\\\\Users\\\\DELL\\\\Desktop\\\\Youtube-hld\\\\client\\\\src\\\\app\\\\page.js\",\n            lineNumber: 10,\n            columnNumber: 5\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\DELL\\\\Desktop\\\\Youtube-hld\\\\client\\\\src\\\\app\\\\page.js\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9zcmMvYXBwL3BhZ2UuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUErQjtBQUNDO0FBQ2lCO0FBSWxDLFNBQVNHO0lBQ3RCLHFCQUNFLDhEQUFDQztrQkFDRCw0RUFBQ0YsOERBQVVBOzs7Ozs7Ozs7O0FBSWYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jbGllbnQvLi9zcmMvYXBwL3BhZ2UuanM/MmIzZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgSW1hZ2UgZnJvbSBcIm5leHQvaW1hZ2VcIjtcbmltcG9ydCBSb29tIGZyb20gXCIuL3BhZ2VzL3Jvb21cIjtcbmltcG9ydCBVcGxvYWRGb3JtIGZyb20gXCIuL2NvbXBvbmVudHMvdXBsb2FkRm9ybVwiO1xuXG5cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2PlxuICAgIDxVcGxvYWRGb3JtLz5cbiAgICB7LyogPFJvb20vPiAqL31cbiAgICA8L2Rpdj5cbiAgKTtcbn1cbiJdLCJuYW1lcyI6WyJJbWFnZSIsIlJvb20iLCJVcGxvYWRGb3JtIiwiSG9tZSIsImRpdiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./src/app/page.js\n");
 
 /***/ }),
 
@@ -243,7 +393,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.js&appDir=C%3A%5CUsers%5CDELL%5CDesktop%5CYoutube-hld%5Cclient%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CDELL%5CDesktop%5CYoutube-hld%5Cclient&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/axios","vendor-chunks/asynckit","vendor-chunks/debug","vendor-chunks/mime-db","vendor-chunks/form-data","vendor-chunks/follow-redirects","vendor-chunks/supports-color","vendor-chunks/proxy-from-env","vendor-chunks/ms","vendor-chunks/mime-types","vendor-chunks/has-flag","vendor-chunks/delayed-stream","vendor-chunks/combined-stream"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.js&appDir=C%3A%5CUsers%5CDELL%5CDesktop%5CYoutube-hld%5Cclient%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CDELL%5CDesktop%5CYoutube-hld%5Cclient&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();
