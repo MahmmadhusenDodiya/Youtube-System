@@ -5,8 +5,8 @@ const upload = multer();
 
 const router=express.Router();
 
-router.post('/',upload.single('file'),uploadToAWSLocal);
-
+// router.post('/',upload.single('file'),uploadToAWSLocal);
+router.post('/', upload.fields([{ name: 'chunk' }, { name: 'totalChunks' }, { name: 'chunkIndex' }]), uploadToAWSLocal);
 
 router.get('/',(req,res)=>{
 

@@ -8,9 +8,9 @@ import AuthPage from "./pages/auth";
 export default function Home() {
   return (
     <div>
-    {/* <UploadForm/> */}
+    <UploadForm/>
     {/* <Room/> */}
-    <AuthPage/>
+    {/* <AuthPage/> */}
     </div>
   );
 }
