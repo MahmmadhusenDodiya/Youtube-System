@@ -9,7 +9,18 @@ const AuthPage = () => {
 
    const signin = () => {
        console.log("Signing in Google");
+       console.log("started");
        signIn("google");
+       console.log("End");
+
+       for(let z=10;z<=333;z++)
+        {
+            let x=10;
+            x=x+2;
+            x=x/2;
+            x--;
+            x++;
+        }
    }
 
    const signout = () => {
