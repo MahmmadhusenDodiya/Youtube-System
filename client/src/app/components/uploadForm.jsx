@@ -26,7 +26,8 @@ const UploadForm = () => {
 
     const handleFileUpload = async (file) => {
 
-        //for simple Image Upload
+        // ------------ for simple Image Upload ------------------
+       /*
         try {
             const formData = new FormData();
             formData.append('file', file);
@@ -43,9 +44,10 @@ const UploadForm = () => {
         catch (error) {
 
         }
+        */
 
 
-        /*
+        
     
         try {
           const chunksize = 5 * 1024 * 1024;
@@ -67,7 +69,7 @@ const UploadForm = () => {
             start += chunksize;
     
             const formData = new FormData();
-            formData.append('filename', chunkIndex+""+file.name);
+            formData.append('filename',file.name);
             formData.append('chunk', chunk);
             formData.append('totalChunks', totalchunks);
             formData.append('chunkIndex', chunkIndex);
@@ -88,7 +90,7 @@ const UploadForm = () => {
         catch (error) {
           console.log("Error Uploading file ", error);
         }
-        */
+        
     }
 
 

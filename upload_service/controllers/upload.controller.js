@@ -48,10 +48,22 @@ const uploadFileToS3 = async (req, res) => {
 
   console.log("upload request is receievd");
 
-  if (!req.file) {
-    console.log('No file receieved in request');
-    return res.status(400).send({ "Error Message": "No File in request" });
+  if (!req.files || !req.files['chunk'] || !req.body['totalChunks'] || !req.body['chunkIndex'] || !req.body['filename']) {
+    console.log("Missing Required Data");
+    return res.status(400).send('no File Received');
   }
+
+  const chunk = req.files['chunk'];
+  const filename = req.body['filename'];
+  const totalChunks = req.body['totalChunks'];
+  const chunkIndex = req.body['chunkIndex'];
+
+  if(!chunk) console.log("Chunk Not Found :( ");
+  console.log("File Name=" + filename);
+  console.log("totalChunks=" + totalChunks);
+  console.log("chunk Index=" + chunkIndex);
+
+
   console.log("file is in request");
   const file = req.file;
   AWS.config.update({
@@ -63,8 +75,8 @@ const uploadFileToS3 = async (req, res) => {
 
   const params = {
     Bucket: process.env.AWS_BUCKET,
-    Key: file.originalname,
-    Body: file.buffer
+    Key: filename,
+    Body: chunk[0].buffer
   };
 
 

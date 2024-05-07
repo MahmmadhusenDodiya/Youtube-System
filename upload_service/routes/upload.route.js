@@ -10,7 +10,8 @@ const router=express.Router();
 
 //router.post('/', upload.fields([{ name: 'chunk' }, { name: 'totalChunks' }, { name: 'chunkIndex' }]), uploadToAWSLocal);
 
-router.post('/',upload.single('file'),uploadFileToS3);
+router.post('/', upload.fields([{ name: 'chunk' }, { name: 'totalChunks' }, { name: 'chunkIndex' }]), uploadFileToS3);
+
 
 router.get('/',(req,res)=>{
 
