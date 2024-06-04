@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path';
 import AWS from 'aws-sdk';
+import { addVideoDetailsToDB } from '../db/db.js';
 
 const __dirname = path.resolve();
 
@@ -148,7 +149,7 @@ export const uploadChunk = async (req, res) => {
       };
 
       const data = await s3.uploadPart(partParams).promise();
-      console.log("data------- ", data);
+      console.log("data-------", data);
       res.status(200).json({ success: true });
   } catch (err) {
       console.error('Error uploading chunk:', err);
@@ -194,6 +195,10 @@ export const completeUpload = async (req, res) => {
       const uploadResult = await s3.completeMultipartUpload(completeParams).promise();
 
       console.log("data----- ", uploadResult);
+
+      await addVideoDetailsToDB("videoDetails.title", "videoDetails.description", "videoDetails.author", uploadResult.Location);
+
+
       return res.status(200).json({ message: "Uploaded successfully!!!" });
 
   } catch (error) {

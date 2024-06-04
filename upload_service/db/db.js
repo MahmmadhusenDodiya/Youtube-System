@@ -11,4 +11,3 @@ export async function addVideoDetailsToDB(title, description, author, url) {
   } })
  console.log("this is video data : "+videoData);
 }
-// C:\Users\DELL\Desktop\Test\Youtube-hld\transcode_service

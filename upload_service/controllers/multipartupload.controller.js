@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 import fs from 'fs';
+import { addVideoDetailsToDB } from '../db/db.js';
 
 const multipartUploadFileToS3 = async (req, res) => {
    console.log('Upload req received');
@@ -77,6 +78,7 @@ const multipartUploadFileToS3 = async (req, res) => {
 
 
        console.log('File uploaded successfully');
+
        res.status(200).send('File uploaded successfully');
 
    } catch (err) {
@@ -84,6 +86,29 @@ const multipartUploadFileToS3 = async (req, res) => {
        res.status(500).send('File could not be uploaded');
    }
 };
+
+
+export const uploadToDb=async (req,res)=>{
+    console.log("adding data to db");
+    try{
+        const videoDetails=req.body;
+        await addVideoDetailsToDB(videoDetails.title, videoDetails.description, videoDetails.author, videoDetails.url);
+        return res.status(200).send("Success");
+    }
+    catch(error){
+        console.log("Error Occure While adding video meta-data to DB Error="+error);
+        return res.status(400).send(error);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 export default multipartUploadFileToS3;
 

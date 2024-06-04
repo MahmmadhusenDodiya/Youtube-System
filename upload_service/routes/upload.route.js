@@ -1,7 +1,7 @@
 import express from "express"
 import uploadFileToS3, { completeUpload, initializeUpload, uploadChunk, uploadToAWSLocal } from "../controllers/upload.controller.js";
 import multer from 'multer'
-import multipartUploadFileToS3 from "../controllers/multipartupload.controller.js";
+import multipartUploadFileToS3, { uploadToDb } from "../controllers/multipartupload.controller.js";
 const upload = multer();
 
 const router=express.Router();
@@ -19,6 +19,7 @@ const router=express.Router();
 //Upload direct from backed to S3 Entire in One request
 // router.post('/', multipartUploadFileToS3);
 
+router.post('/uploadToDB', uploadToDb);
 
 
 // Route for initializing upload step1 
