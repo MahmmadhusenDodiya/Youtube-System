@@ -11,7 +11,7 @@ async function generateSignedUrl(videoKey) {
    const params = {
        Bucket: process.env.AWS_BUCKET,
        Key: videoKey,
-       Expires: 3600 // URL expires in 1 hour, adjust as needed
+       Expires: 3600 // 60*60 seconds
    };
 
    return new Promise((resolve, reject) => {
@@ -27,7 +27,8 @@ async function generateSignedUrl(videoKey) {
 
 const watchVideo = async (req, res) => {
    try {
-       const videoKey = req.query.key; // Key of the video file in S3
+       const videoKey = req.query.key;
+       console.log("Video Key:"+videoKey);
        const signedUrl = await generateSignedUrl(videoKey);
        res.json({ signedUrl });
    } catch (err) {

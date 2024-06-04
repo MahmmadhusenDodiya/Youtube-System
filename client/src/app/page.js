@@ -8,8 +8,8 @@ import AuthPage from "./pages/auth";
 export default function Home() {
   return (
     <div>
-    <UploadForm/>
-    {/* <Room/> */}
+    {/* <UploadForm/> */}
+    <Room/>
     {/* <AuthPage/> */}
     </div>
   );

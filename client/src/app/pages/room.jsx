@@ -33,9 +33,14 @@ const Room = () => {
                 width="1080px" height="720px" controls={true}
             /></div> */}
 
-            <div><ReactPlayer url='https://youtu.be/HrnrqYxYrbk?si=mXCrwTo3-KExT4H5'
+            {/* <div><ReactPlayer url='https://youtu.be/HrnrqYxYrbk?si=mXCrwTo3-KExT4H5'
+                width="1080px" height="720px" controls={true}
+            /></div> */}
+
+            <div><ReactPlayer url='https://youtube072.s3.ap-south-1.amazonaws.com/25mb.mp4'
                 width="1080px" height="720px" controls={true}
             /></div>
+
         </div>
     )
 }
