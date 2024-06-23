@@ -11,6 +11,7 @@
   "dependencies": {
     "aws-sdk": "^2.1614.0",
     "axios": "^1.6.8",
+    "hls.js": "^1.5.11",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
     "react": "^18",

@@ -2,11 +2,12 @@ import express from "express"
 import cors from "cors"
 import dotenv from "dotenv"
 import KafkaConfig from "./kafka/kafka.js";
+import convertToHLS from "./hls/transcode.js";
 
 
 dotenv.config();
 
-const port=process.env.PORT || 8081
+const port=process.env.PORT || 8081;
 const app=express();
 
 
@@ -17,9 +18,17 @@ app.use(cors({
 app.use(express.json());
 
 
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
+    // convertToHLS();
     res.send("Hello World From Transacode service");
-})
+    // res.send("Transcoding Completed :)");
+});
+
+
+app.get('/start',(req,res)=>{
+    convertToHLS();
+    res.send("Transcoding Completed :)");
+});
 
 
 // index.js
@@ -28,8 +37,8 @@ app.use('/',(req,res)=>{
 const kafkaconfig =  new KafkaConfig();
 
 kafkaconfig.consume("transcode", (value)=>{
-   console.log("got data from kafka : " , value);
-})
+   console.log("Consumed Data is= " , value);
+});
 
 
 
@@ -38,4 +47,4 @@ kafkaconfig.consume("transcode", (value)=>{
 
 app.listen(port,()=>{
     console.log(`Server Started on http://localhost:${port}`);
-})
+});

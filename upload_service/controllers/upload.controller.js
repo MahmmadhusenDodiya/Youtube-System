@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path';
 import AWS from 'aws-sdk';
 import { addVideoDetailsToDB } from '../db/db.js';
+import { sendMessageForEncoding } from './kafkapublisher.controller.js';
 
 const __dirname = path.resolve();
 
@@ -203,7 +204,13 @@ export const completeUpload = async (req, res) => {
     console.log("Video uploaded at ", url);
 
     await addVideoDetailsToDB(title, description, author, url);
-    return res.status(200).json({ message: "Uploaded successfully!!!" });
+
+    //upload completed then publish message to kafka
+    console.log("going to send message to kafka for encoding title="+title);
+    await sendMessageForEncoding(title,url);
+    console.log("message published to kafka to encoding title="+title);
+
+    return res.status(200).json({ message: "Uploaded successfully :)" });
 
   } catch (error) {
     console.log('Error completing upload :', error);
