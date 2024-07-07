@@ -131,6 +131,7 @@ export const initializeUpload = async (req, res) => {
 
 // Upload single chunk called many times
 export const uploadChunk = async (req, res) => {
+  console.log("--- Uploading single Chunk---");
   try {
     console.log('Uploading Chunk');
     const { filename, chunkIndex, uploadId } = req.body;
@@ -157,6 +158,15 @@ export const uploadChunk = async (req, res) => {
     res.status(500).send('Chunk could not be uploaded');
   }
 };
+
+
+export const testing = async (req, res) => {
+  console.log("--- Uploading single Chunk---");
+  
+    res.status(200).json({ success: true });
+ 
+};
+
 
 // Complete upload one time
 export const completeUpload = async (req, res) => {
@@ -207,6 +217,7 @@ export const completeUpload = async (req, res) => {
 
     //upload completed then publish message to kafka
     console.log("going to send message to kafka for encoding title="+title);
+    console.log("going to send message to kafka for encoding url="+url);
     await sendMessageForEncoding(title,url);
     console.log("message published to kafka to encoding title="+title);
 

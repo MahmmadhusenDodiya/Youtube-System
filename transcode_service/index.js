@@ -3,6 +3,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import KafkaConfig from "./kafka/kafka.js";
 import convertToHLS from "./hls/transcode.js";
+import transcodeFromS3 from "./hls/transcodeFromS3.js";
 
 
 dotenv.config();
@@ -19,7 +20,13 @@ app.use(express.json());
 
 
 app.get('/',(req,res)=>{
+
+    transcodeFromS3();
+
+
+
     // convertToHLS();
+    
     res.send("Hello World From Transacode service");
     // res.send("Transcoding Completed :)");
 });

@@ -140,9 +140,9 @@ const UploadForm = () => {
                 uploadPromises.push(uploadPromise);
             }
 
-
+            console.log("waiting for chunk upload complete");
             await Promise.all(uploadPromises);
-
+            console.log("Upload chunks completed");
             //----------------------------------------------------------------------
             // Step :3
 

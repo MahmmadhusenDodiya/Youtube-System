@@ -47,8 +47,8 @@ const YouTubeHome = () => {
                            </div>
                            <div className="p-4">
                                <h2 className="text-lg font-semibold mb-2">{video.title}</h2>
-                               <p className="text-gray-700">Author - {video.author}</p>
-                               <p className="text-gray-700">{video.description}</p>
+                               <p className="text-gray-700 font-bold">Author - {video.author}</p>
+                               <p className="text-gray-700 font-serif">{video.description}</p>
                            </div>
                        </div>
                    ))}

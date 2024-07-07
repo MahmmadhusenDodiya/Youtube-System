@@ -14,6 +14,7 @@ app.use(cors({
     origin:"*"
 }));
 app.use(express.json());
+
 app.use('/upload',uploadRouter);
 app.use('/publish',kafkaPublisherRouter);
 
