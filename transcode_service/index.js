@@ -45,6 +45,7 @@ const kafkaconfig =  new KafkaConfig();
 
 kafkaconfig.consume("transcode", (value)=>{
    console.log("Consumed Data is= " , value);
+   transcodeFromS3(value);
 });
 
 

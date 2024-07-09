@@ -30,7 +30,9 @@ const YouTubeHome = () => {
 
    return (
        <div>
+        <div className="sticky top-0 z-50">
         <NavBar/>
+        </div>
            {loading ? (
                <div className='container mx-auto flex justify-center items-center h-screen'>Loading...</div>
            ) : (
@@ -42,7 +44,7 @@ const YouTubeHome = () => {
                                <ReactPlayer url={video.url}
                                    width="360px"
                                    height="180px"
-                                   controls={true}
+                                   controls={false}
                                />
                            </div>
                            <div className="p-4">

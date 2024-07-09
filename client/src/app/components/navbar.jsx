@@ -12,7 +12,7 @@ const NavBar = () => {
        router.push('/upload')
    }
    return (
-       <div>
+       <div >
            <nav className="bg-white border-gray-200 dark:bg-gray-500">
                <div className=" flex flex-wrap items-center justify-between mx-auto p-2">
                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black-700">Youtube HLD</span>
@@ -39,7 +39,7 @@ const NavBar = () => {
                                    </span>
                                    <div className='m-3'>
                                     
-                                       <img class="w-10 h-10" src={data.user.image} alt="User Image.." />
+                                       <img className="w-10 h-10" src={data.user.image} alt="User Image.." />
                                    </div>
                                </div>
 

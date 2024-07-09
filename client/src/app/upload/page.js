@@ -155,10 +155,14 @@ const UploadForm = () => {
                 description: description,
                 author: author
             });
-
+            console.log("Successful Upload");
+            alert("Upload Successful Redirecting to Homepage");
+            console.log("Redirecting to Home page");
+            window.location.replace('/');
             console.log(completeRes.data);
         } catch (error) {
             console.error('Error uploading file:', error);
+            alert("upload Failed :(");
         }
 
     }
@@ -214,7 +218,7 @@ const UploadForm = () => {
       <button
         type="button"
         onClick={handleFileUpload}
-        className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        className="text-white bg-gradient-to-br from-red-600 to-red-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
       >
         Upload
       </button>

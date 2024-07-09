@@ -16,7 +16,7 @@ const s3 = new AWS.S3({
 });
 
 
-const mp4FileName = '197898-905833761.mp4';
+
 const bucketName = process.env.AWS_BUCKET;
 const hlsFolder = 'hls';
 
@@ -26,7 +26,28 @@ const printTime = async (x) => {
 
 }
 
-const transcodeFromS3 = async () => {
+const transcodeFromS3 = async (data) => {
+    // const jsondata=data.
+    
+    const jsondata=JSON.parse(data);
+
+
+    console.log("this is JSON object "+jsondata);
+
+    const title=jsondata.title;
+    const url=jsondata.url;
+
+
+    
+    console.log("this is title receieved by transcoder service="+title);
+    console.log("this is url receieved by transcoder service="+url);
+
+    const parts=url.split('/');
+    const VideoName=parts[parts.length-1];
+    const mp4FileName = VideoName;
+
+
+    console.log("this is last part ="+VideoName);
 
     printTime(1);
 
@@ -37,7 +58,7 @@ const transcodeFromS3 = async () => {
         printTime(2);
         console.log('Downloading s3 mp4 file locally');
         const mp4FilePath = `${mp4FileName}`;
-        const writeStream = fs.createWriteStream('197898-905833761.mp4');
+        const writeStream = fs.createWriteStream(VideoName);
         printTime(3);
         const readStream = s3
             .getObject({ Bucket: bucketName, Key: mp4FilePath })
@@ -84,7 +105,7 @@ const transcodeFromS3 = async () => {
                 '_'
             )}_${resolution}_%03d.ts`;
             await new Promise((resolve, reject) => {
-                ffmpeg('./197898-905833761.mp4')
+                ffmpeg(VideoName)
                     .outputOptions([
                         `-c:v h264`,
                         `-b:v ${videoBitrate}`,
@@ -136,7 +157,7 @@ const transcodeFromS3 = async () => {
         console.log(`Deleting locally downloaded s3 mp4 file`);
 
 
-        fs.unlinkSync('197898-905833761.mp4');
+        fs.unlinkSync(VideoName);
         console.log(`Deleted locally downloaded s3 mp4 file`);
 
 
