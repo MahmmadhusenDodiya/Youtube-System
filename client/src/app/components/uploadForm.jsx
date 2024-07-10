@@ -45,7 +45,7 @@ const UploadForm = () => {
     }
 
     const handleFileUpload = async (file) => {
-
+        console.log("TEST");
         // ------------ for simple Image Upload ------------------
         /*
          try {
@@ -96,7 +96,7 @@ const UploadForm = () => {
             // As 5 MB is minimum size for AWS Multipart
             const chunksize = 5 * 1024 * 1024;
             const totalchunks = Math.ceil((selectedFile.size / chunksize));
-            console.log("selectedFile size =" + selectedFile.size);
+            console.log("1.selectedFile size =" + selectedFile.size);
             console.log("this is chunk size=" + chunksize);
             console.log("total chunks=" + totalchunks);
 

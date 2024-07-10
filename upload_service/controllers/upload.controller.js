@@ -172,8 +172,10 @@ export const testing = async (req, res) => {
 export const completeUpload = async (req, res) => {
   try {
     console.log('Complete API Called : ) ');
-    const { filename, totalChunks, uploadId, title, description, author } = req.body;
+    const { filename, totalChunks, uploadId, title, description, author,videoDuration } = req.body;
 
+
+    console.log("this is length of video for upload service: "+videoDuration);
     console.log("this is request body for complete API =" + req.body);
 
 

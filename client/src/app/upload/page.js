@@ -1,14 +1,18 @@
 "use client"
-import React, { useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
 import { redirect, useRouter } from 'next/navigation'
+
+
+
+
 
 const UploadForm = () => {
 
 
 
-    const {data}=useSession();
+    const { data } = useSession();
     const [selectedFile, setSelectedFile] = useState(null);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -18,13 +22,13 @@ const UploadForm = () => {
     useEffect(() => {
         console.log('this is data :  ', data);
 
-        if(!data) {
+        if (!data) {
             console.log("data not found redirect to home");
-          console.log('redirecting');
-          redirect("/");
+            console.log('redirecting');
+            redirect("/");
         }
-      }, [])
-     
+    }, [])
+
 
     const handleFileChange = (e) => {
         // for (let x = 1; x <= 20000; x++) {
@@ -44,7 +48,84 @@ const UploadForm = () => {
         handleFileUpload(selectedFile);
     }
 
+
+    // const getVideoLengthFromBuffer = (buffer) => {
+
+    //     console.log("Calculating the size of video ");
+
+    //     return new Promise((resolve, reject) => {
+    //         const bufferStream = new PassThrough();
+    //         bufferStream.end(buffer);
+
+    //         ffmpeg.ffprobe(bufferStream, (err, metadata) => {
+    //             if (err) {
+    //                 return reject(err);
+    //             }
+    //             resolve(metadata.format.duration);
+    //         });
+    //     });
+
+
+    // };
+
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    async function blockForThreeSeconds() {
+        console.log("Blocking for 3 seconds...");
+        
+        await delay(3000); // Wait for 3 seconds (3000 milliseconds)
+        
+        console.log("3 seconds have passed.");
+    }
+    
+    // Usage example
+
     const handleFileUpload = async (file) => {
+
+
+
+        // await calculateLength();
+
+        console.log("this is my file ok=" + selectedFile);
+        console.log("this is src=" + selectedFile.src);
+        console.log("this is lenght=" + selectedFile.duration);
+
+        const selectedFileUrl = URL.createObjectURL(selectedFile);
+        
+        const videoElement = document.createElement('video');
+        videoElement.id = "VL";
+        videoElement.src = selectedFileUrl;
+
+
+        
+
+        let lengthOfVideo;
+        
+        videoElement.addEventListener('loadedmetadata', function() {
+            console.log("This is the video length: " + videoElement.duration + " seconds");
+            lengthOfVideo=videoElement.duration;
+
+        });
+        
+        document.body.appendChild(videoElement); // Append the video element to the document for it to load
+        
+
+        await blockForThreeSeconds();
+
+
+
+        // for(let i=1;i<=10000000;i++) {
+        //     let a=1;
+        //     a++;
+        //     a--;
+        // }
+
+        // Further code to set video source and handle metadata loading
+
+
+
 
         // ------------ for simple Image Upload ------------------
         /*
@@ -94,16 +175,27 @@ const UploadForm = () => {
             // });
 
             // As 5 MB is minimum size for AWS Multipart
+
+            // console.log(selectedFile);
+            console.log("ok ok ok ok ok ok ok");
+            // console.log("this is vide length=" + getVideoLength(selectedFile));
+
+
             const chunksize = 5 * 1024 * 1024;
             const totalchunks = Math.ceil((selectedFile.size / chunksize));
-            console.log("selectedFile size =" + selectedFile.size);
-            console.log("this is chunk size=" + chunksize);
-            console.log("total chunks=" + totalchunks);
+            console.log("1.selectedFile size =" + selectedFile.size);
+            console.log("2.this is chunk size=" + chunksize);
+            console.log("3.total chunks=" + totalchunks);
+
+
+
+
 
             //---------------------------------------------------------
             // Step :1
             const formData = new FormData();
             formData.append('filename', selectedFile.name);
+            // formData.append('videolenght',lengthOfVideo);
             const initializeRes = await axios.post('http://localhost:8080/upload/initialize', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -153,7 +245,8 @@ const UploadForm = () => {
                 uploadId: uploadId,
                 title: title,
                 description: description,
-                author: author
+                author: author,
+                videoDuration:lengthOfVideo
             });
             console.log("Successful Upload");
             alert("Upload Successful Redirecting to Homepage");
@@ -180,50 +273,50 @@ const UploadForm = () => {
         // </div>
 
 
-        
-<div className='container mx-auto max-w-lg p-10'>
-    <form encType="multipart/form-data">
-      <div className="mb-4">
-        <input type="text"
-               name="title"
-               placeholder="Title"
-               value={title}
-               onChange={(e) => setTitle(e.target.value)}
-               required
-               className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
-      <div className="mb-4">
-        <input type="text"
-               name="description"
-               placeholder="Description"
-               value={description}
-               onChange={(e) => setDescription(e.target.value)}
-               className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
-      <div className="mb-4">
-        <input type="text"
-               name="author"
-               placeholder="Author"
-               value={author}
-               onChange={(e) => setAuthor(e.target.value)}
-               required
-               className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
-      <div className="mb-4">
-        <input type="file"
-               name="file"
-               onChange={handleFileChange}
-               className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
-      <button
-        type="button"
-        onClick={handleFileUpload}
-        className="text-white bg-gradient-to-br from-red-600 to-red-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-      >
-        Upload
-      </button>
-    </form>
-  </div>
+
+        <div className='container mx-auto max-w-lg p-10'>
+            <form encType="multipart/form-data">
+                <div className="mb-4">
+                    <input type="text"
+                        name="title"
+                        placeholder="Title"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                        className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
+                </div>
+                <div className="mb-4">
+                    <input type="text"
+                        name="description"
+                        placeholder="Description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
+                </div>
+                <div className="mb-4">
+                    <input type="text"
+                        name="author"
+                        placeholder="Author"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
+                        required
+                        className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
+                </div>
+                <div className="mb-4">
+                    <input type="file"
+                        name="file"
+                        onChange={handleFileChange}
+                        className="px-3 py-2 w-full border rounded-md focus:outline-none focus:border-blue-500" />
+                </div>
+                <button
+                    type="button"
+                    onClick={handleFileUpload}
+                    className="text-white bg-gradient-to-br from-red-600 to-red-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                    Upload
+                </button>
+            </form>
+        </div>
 
     )
 }
