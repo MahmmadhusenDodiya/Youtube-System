@@ -5,7 +5,7 @@ import Hls from 'hls.js';
 
 const VideoPlayer = () => {
    const videoRef = useRef(null);
-   const src = "https://youtube072.s3.ap-south-1.amazonaws.com/lion_mp4_master.m3u8";
+   const src = "https://youtube072.s3.ap-south-1.amazonaws.com/hls/32975-394513987_mp4_master.m3u8";
 
    useEffect(() => {
        const video = videoRef.current;

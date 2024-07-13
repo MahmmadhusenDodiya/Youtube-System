@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios"
 import dynamic from 'next/dynamic'
 import NavBar from '../components/navbar';
+import { useRouter } from 'next/navigation';
+
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const YouTubeHome = () => {
@@ -28,6 +30,28 @@ const YouTubeHome = () => {
 
     }, []);
 
+    const router = useRouter();
+
+
+
+    const handleVideoClick = (video) => {
+        console.log("clicked on video --------------");
+        const queryString = new URLSearchParams({
+            id: video.id,
+            title: video.title,
+            url: video.url,
+            author: video.author,
+            videoDuration: video.videoDuration,
+            description: video.description,
+          }).toString();
+      
+          router.push(`/player?${queryString}`);
+
+        // router.push('player');
+
+    };
+
+
 
     return (
         <div>
@@ -42,9 +66,9 @@ const YouTubeHome = () => {
 
 
 
-                        <div key={video.id}
-                            className="border rounded-md overflow-hidden">
-                            <div>
+                        <div onMouseOver={(e) => e.currentTarget.style.borderColor = 'red'}  onMouseOut={(e) => e.currentTarget.style.borderColor = 'transparent'} onClick={()=>handleVideoClick(video)} key={video.id}
+                            className="cursercursor-pointer  transform transition-transform duration-300 hover:scale-105 border rounded-md overflow-hidden" >
+                            <div >
                                 <ReactPlayer url={video.url}
                                     width="360px"
                                     height="180px"
