@@ -20,6 +20,7 @@ title       String
 description String?
 author      String
 url         String
+videoDuration Float?
 }
 // description is optional
 

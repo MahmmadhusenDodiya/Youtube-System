@@ -162,9 +162,9 @@ export const uploadChunk = async (req, res) => {
 
 export const testing = async (req, res) => {
   console.log("--- Uploading single Chunk---");
-  
-    res.status(200).json({ success: true });
- 
+
+  res.status(200).json({ success: true });
+
 };
 
 
@@ -172,10 +172,10 @@ export const testing = async (req, res) => {
 export const completeUpload = async (req, res) => {
   try {
     console.log('Complete API Called : ) ');
-    const { filename, totalChunks, uploadId, title, description, author,videoDuration } = req.body;
+    const { filename, totalChunks, uploadId, title, description, author, videoDuration } = req.body;
 
 
-    console.log("this is length of video for upload service: "+videoDuration);
+    console.log("this is length of video for upload service: " + videoDuration);
     console.log("this is request body for complete API =" + req.body);
 
 
@@ -215,13 +215,13 @@ export const completeUpload = async (req, res) => {
     const url = uploadResult.Location;
     console.log("Video uploaded at ", url);
 
-    await addVideoDetailsToDB(title, description, author, url);
+    await addVideoDetailsToDB(title, description, author, url,videoDuration);
 
     //upload completed then publish message to kafka
-    console.log("going to send message to kafka for encoding title="+title);
-    console.log("going to send message to kafka for encoding url="+url);
-    await sendMessageForEncoding(title,url);
-    console.log("message published to kafka to encoding title="+title);
+    console.log("going to send message to kafka for encoding title=" + title);
+    console.log("going to send message to kafka for encoding url=" + url);
+    await sendMessageForEncoding(title, url);
+    console.log("message published to kafka to encoding title=" + title);
 
     return res.status(200).json({ message: "Uploaded successfully :)" });
 
