@@ -29,7 +29,7 @@ Video watching is facilitated through adaptive bit rate streaming with HTTP Live
 4. **Watch Service:**
    - Lists all videos with their metadata, duration, and S3 links for the Next.js client to use.
 
-### Deployment Diagram:
+###  Deployment Diagram:
 
 ![alt text](image.png)
 
