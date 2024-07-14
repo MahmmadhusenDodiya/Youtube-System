@@ -6,6 +6,8 @@
 This project involves the high-level implementation of a system similar to YouTube. The following use cases have been implemented:
 - **Upload Service**
 - **Watch Service**
+-**Transcode Service:**
+- **Client (Next.js):**
 
 Video watching is facilitated through adaptive bit rate streaming with HTTP Live Streaming (HLS). AWS S3 is used to store video data, and PostgreSQL is used for storing video metadata. Kafka is utilized to handle the video transcoding process. OAuth2 integration with Google login has also been implemented.
 
