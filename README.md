@@ -6,7 +6,6 @@
 This project involves the high-level implementation of a system similar to YouTube. The following use cases have been implemented:
 - **Upload Service**
 - **Watch Service**
-- 
 -**Transcode Service:**
 - **Client (Next.js):**
 
